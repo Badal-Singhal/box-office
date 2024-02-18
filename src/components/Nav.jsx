@@ -14,15 +14,16 @@ export default function Nav() {
   ];
   return (
     <>
-    <div>
-      <ul>
-        {LINK.map(item => (<li key={LINK.to}>
-          <Link to={item.to}>{item.text}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <Apptitle/>
+      <div>
+        <ul>
+          {LINK.map(item => (
+            <li key={LINK.to}>
+              <Link to={item.to}>{item.text}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Apptitle />
     </>
   );
 }

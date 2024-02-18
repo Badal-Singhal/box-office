@@ -4,5 +4,5 @@ export default function Apptitle() {
       <h2>Box Office</h2>
       <p>Are you looking for a Movie or an Actor?</p>
     </div>
-  )
+  );
 }
