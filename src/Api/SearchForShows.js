@@ -6,4 +6,4 @@ const apiGet = async queryString => {
   return body;
 };
 
-export const SearchForShows = query => apiGet(`/search/shows?q=${query}`);
+export const SearchForShows = (query,option) => {return apiGet(`/search/${option}?q=${query}`);}
