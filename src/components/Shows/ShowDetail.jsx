@@ -1,9 +1,14 @@
 
 
-export default function ShowDetail({data}) {
+export default function ShowDetail(props) {
+  const {status,premiered, network}=props;
   return (
     <div>
-      <h1>{data.name}</h1>
+      <p>status: {status}</p>
+      <p>
+        Premiered {premiered}{!!network && ` on ${network.name}`}
+      </p>
+    
     </div>
   )
 }

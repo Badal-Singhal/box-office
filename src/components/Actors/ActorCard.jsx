@@ -10,7 +10,7 @@ export default function ActorCard({ data }) {
         }
       />
       <h2>{data.person.name} ({data.person.gender})</h2>
-      <p>Country belongs to: <b> {data.person.country.name}</b></p>
+      <p>Country belongs to: <b> {data.person.country?data.person.country.name:"NA"}</b></p>
       <p>{data.person.birthday?data.person.birthday:"NA"} - {data.person.deathday?data.person.deathday:"Alive"}</p>
       
     </div>
