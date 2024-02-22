@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function ShowCard({ data,onStarHandler }) {
+export default function ShowCard({ data,onStarHandler,isStarred}) {
   const summaryCut = data.show.summary
     ? data.show.summary.split(' ').slice(0, 10).join(' ').replace(/<.+?>/g, ' ')
     : 'Not available';
@@ -14,7 +14,7 @@ export default function ShowCard({ data,onStarHandler }) {
       <h2>{data.show.name}</h2>
       <p>{summaryCut}</p>
       <Link to={`/shows/${id}`} target='_blank'>Read More</Link>
-      <button onClick={()=>onStarHandler(data.show.id)} type="button">Star Me</button>
+      <button onClick={()=>onStarHandler(data.show.id)} type="button">{isStarred?"UnStar Me":"Star Me"}</button>
     </div>
   );
 }
