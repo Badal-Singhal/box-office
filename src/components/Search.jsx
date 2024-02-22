@@ -27,7 +27,7 @@ export default function Search({ onSearch }) {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <SearchInput type="text" value={searchStr} onChange={onInputChange}></SearchInput>
+        <SearchInput type="text" value={searchStr} onChange={onInputChange} placeholder='Search for Something'></SearchInput>
         <RadiosWrapper>
         <StyledRadio>
           Shows

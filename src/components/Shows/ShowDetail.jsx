@@ -1,14 +1,23 @@
+import styled from "styled-components";
 
 
 export default function ShowDetail(props) {
   const {status,premiered, network}=props;
   return (
-    <div>
-      <p>status: {status}</p>
+    <DetailsWrapper>
+      <p>Status: {status}</p>
       <p>
-        Premiered {premiered}{!!network && ` on ${network.name}`}
+        Premiered: {premiered}{!!network && ` on ${network.name}`}
       </p>
     
-    </div>
+    </DetailsWrapper>
   )
 }
+
+//css component
+
+const DetailsWrapper = styled.div`
+  p {
+    margin: 5px 0;
+  }
+`;

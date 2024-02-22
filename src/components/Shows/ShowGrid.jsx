@@ -1,6 +1,6 @@
 import { Reducerfun, usePersistedReducer } from '../../lib/useStarredShows';
 import ShowCard from './ShowCard';
-
+import { FlexGrid } from '../common/FlexGrid';
 
 
 // const usePersistedReducer = (reducer, initialState, storageKey) => {
@@ -44,7 +44,7 @@ export default function ShowGrid({ apiData }) {
   };
 
   return (
-    <div>
+    <FlexGrid>
       {apiData.map(data => (
         <ShowCard
           key={data.show.id}
@@ -53,6 +53,6 @@ export default function ShowGrid({ apiData }) {
           isStarred={starClick.includes(data.show.id)}
         />
       ))}
-    </div>
+    </FlexGrid>
   );
 }

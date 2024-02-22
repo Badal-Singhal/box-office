@@ -1,6 +1,7 @@
 
 import { getShowByIds } from "../Api/SearchForShows";
 import ShowGrid from "../components/Shows/ShowGrid";
+import { TextCenter } from "../components/common/TextCenter";
 import useStarredShows from "../lib/useStarredShows";
 import { useQuery } from '@tanstack/react-query';
 
@@ -17,10 +18,10 @@ export default function Starred() {
   
 
   if(starredError){
-    return <div>we have an error: {starredError.msg}</div>;
+    return <TextCenter>we have an error: {starredError.msg}</TextCenter>;
   }
   if(starredShow?.length===0){
-    return <div> No shows were starred</div>;
+    return <TextCenter> No shows were starred</TextCenter>;
   }
 
 
@@ -28,6 +29,6 @@ export default function Starred() {
     return <ShowGrid apiData={starredShow}/>
   }
 
-  return <div> Shows are loading</div>;
+  return <TextCenter> Shows are loading</TextCenter>;
 
 }

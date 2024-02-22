@@ -4,6 +4,7 @@ import Search from '../components/Search';
 import ShowGrid from '../components/Shows/ShowGrid';
 import ActorGrid from '../components/Actors/ActorGrid';
 import { useQuery } from '@tanstack/react-query';
+import { TextCenter } from '../components/common/TextCenter';
 
 // const reducerfun=(counter,action)=>{
 //   switch(action.type){
@@ -44,10 +45,10 @@ export default function Home() {
 
   const showData = () => {
     if (apiError) {
-      return <div>{`something bad happended:${apiError}`}</div>;
+      return <TextCenter>{`something bad happended:${apiError}`}</TextCenter>;
     }
     if (apiData?.length === 0) {
-      return <div>Nothing to show</div>;
+      return <TextCenter>Nothing to show</TextCenter>;
     }
 
     if (apiData && apiData[0].show) {
